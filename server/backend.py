@@ -29,14 +29,13 @@ class Backend_Api:
         """
         conversation_id = request.json['conversation_id']
 
-        # print('model:', request.json['model'])
+        print('model:', request.json['model'])
         # jailbreak = request.json['jailbreak']
         # print('build_messages(jailbreak):', build_messages(jailbreak))
 
         try:
             jailbreak = request.json['jailbreak']
             model = request.json['model']
-            model = "gpt-3.5-turbo"
             messages = build_messages(jailbreak)
 
             # Generate response
